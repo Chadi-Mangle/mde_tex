@@ -1,0 +1,45 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.remote-caret {
+  position: absolute;
+  border-left: black;
+  border-left-width: 2px;
+  height: 1em;
+}
+.remote-caret > div {
+  position: relative;
+  top: 0.2em;
+  left: 0.5em ;
+  font-size: 12px;
+  background-color: rgb(250, 129, 0);
+  font-family: serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  user-select: none;
+  color: white;
+  border-radius: 5px;
+  padding: 1px 5px;
+  z-index: 3;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  
+}
+
+.remote-caret.hide-name > div {
+  transition-delay: 6s;
+  opacity: 0;
+}
+ 

@@ -1,9 +1,7 @@
-var simplemde = new SimpleMDE({
-    autosave: {
-    enabled: true,
-    uniqueId: "autoSaveID",
-    delay: 1000,
-},
+import { CreatePDf  } from "./create-pdf.js";
+
+export const simplemde = new SimpleMDE({
+    spellChecker: false,
     toolbar: ["side-by-side",
     "|",
     {
@@ -65,8 +63,8 @@ var simplemde = new SimpleMDE({
     {
             name: "custom",
 
-            action: function customFunction(editor){
-                
+            action: function DownloadPDF(){ 
+                CreatePDf()
             },
             
             className: "fa fa-file-pdf-o",
@@ -76,5 +74,3 @@ var simplemde = new SimpleMDE({
     ],
 });
 
-simplemde.toggleSideBySide()
-simplemde.toggleFullScreen()
